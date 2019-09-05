@@ -8,7 +8,6 @@ import {
 } from '../entities'
 
 const AcmePayments: PaymentProcessorContract = {
-  // createSubscription: (payment:PaymentDetails, subscription:SubscriptionDetails) => Promise<PaymentReceipt | AcceptableError>
     // cancelSubscription: (subscriptionId:string) => Promise<SubscriptionDetails | AcceptableError>`
 
   /**
@@ -30,7 +29,7 @@ const AcmePayments: PaymentProcessorContract = {
           meta: {}
         }
       ],
-      metafields: {}
+      meta: {}
     }
     return dummyReceipt;
   },
@@ -57,6 +56,33 @@ const AcmePayments: PaymentProcessorContract = {
       meta: {}
     }
     return dummyRefund;
+  },
+
+  /**
+   * Generate and return a dummy PaymentReceipt
+   */
+  async createSubscription(
+    payment:PaymentDetails,
+    subscription:SubscriptionDetails,
+  ) {
+    let dummyReceipt = {
+      id: '1vxcajf74gs08chskjbn',
+      timestamp: new Date().toUTCString(),
+      cents: 4800,
+      products: [
+        {
+          id: 'dbv07d7hq1zx38te',
+          name: 'Lemon Candle',
+          slug: 'lemon-candle',
+          cents: 2200,
+          description: 'A fragrance you need on a recurring basis.',
+          tags: ['candles', 'citrus'],
+          meta: {}
+        }
+      ],
+      meta: {}
+    }
+    return dummyReceipt;
   }
 }
 

@@ -26,7 +26,7 @@ export interface PaymentReceipt {
   timestamp:string
   cents:number
   products:Product[]
-  metafields:{ [key:string]:string }
+  meta:{ [key:string]:string }
 }
 
 export interface ShippingDetails {

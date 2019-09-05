@@ -1,5 +1,5 @@
 import { ServerError, ClientError } from '../error-types'
-import { PaymentDetails, PaymentReceipt } from '../entities'
+import { PaymentDetails, PaymentReceipt, RefundReceipt } from '../entities'
 
 type AcceptableError = ServerError | ClientError;
 

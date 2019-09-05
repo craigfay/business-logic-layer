@@ -1,4 +1,4 @@
-import { Product } from '../entities/product'
+import { Product, PaymentDetails, ShippingDetails } from '../entities'
 
 import { InventoryManager } from '../service-providers/inventory-manager.shopify'
 
@@ -7,28 +7,6 @@ interface OneTimePurchaseOptions {
   cents:number
   payment:PaymentDetails
   shipping:ShippingDetails
-}
-
-interface PaymentDetails {
-  cardNumber:string
-  expirationMonth:number
-  expirationYear:number
-  securityCode:number
-  firstName:string
-  lastName:string
-  streetAddress:string
-  stateProvince:string
-  country:string
-  metadata: { [key:string]:string }
-}
-
-interface ShippingDetails {
-  firstName:string
-  lastName:string
-  streetAddress:string
-  stateProvince:string
-  country:string
-  metadata: { [key:string]:string }
 }
 
 export async function oneTimePurchase(options:OneTimePurchaseOptions) {

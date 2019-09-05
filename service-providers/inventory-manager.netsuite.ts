@@ -1,5 +1,5 @@
 import { InventoryManagerContract } from '../contracts/inventory-manager'
-import { Product } from '../entities/product'
+import { Product } from '../entities'
 import { ClientError, ServerError } from '../error-types'
 
 class Netsuite implements InventoryManagerContract {

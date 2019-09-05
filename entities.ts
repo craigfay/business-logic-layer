@@ -25,11 +25,12 @@ export interface PaymentReceipt {
   id:string
   timestamp:string
   cents:number
-  products:Product[]
+  products:Array<{ id:string }>
   meta:{ [key:string]:string }
 }
 
 export interface ShippingDetails {
+  id:string
   firstName:string
   lastName:string
   streetAddress:string
@@ -42,15 +43,17 @@ export interface RefundReceipt {
   id:string
   timestamp:string
   cents:number
-  products:Product[]
+  products: Array<{ id:string }>
   meta:{ [key:string]:string }
 }
 
 export interface SubscriptionDetails {
   id:string
-  products:Product[]
+  products:Array<{ id:string }>
   frequency: 'weekly' | 'monthly' | 'quarterly'
-  shipping: ShippingDetails
-  paymentHistory: PaymentReceipt[]
-  meta:{ [key:string]:string }
+  // frequency:string
+  shipping:{ id:string }
+  paymentReceipts:Array<{ id:string }>
+  cents:number
+  meta:{[key:string]:string }
 }

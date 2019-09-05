@@ -1,5 +1,4 @@
 import { Product, PaymentDetails, ShippingDetails } from '../entities'
-
 import { InventoryManager } from '../service-providers/inventory-manager.shopify'
 
 interface OneTimePurchaseOptions {

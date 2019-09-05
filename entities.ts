@@ -1,11 +1,11 @@
 export interface Product {
-  id: number
-  name: string
-  slug: string
-  price: number
-  description: string
-  tags: Array<string>
-  metafields: { [key:string]:string }
+  id:string 
+  name:string
+  slug:string
+  price:number
+  description:string
+  tags:Array<string>
+  metafields:{ [key:string]:string }
 }
 
 export interface PaymentDetails {
@@ -18,7 +18,15 @@ export interface PaymentDetails {
   streetAddress:string
   stateProvince:string
   country:string
-  metadata: { [key:string]:string }
+  metadata:{ [key:string]:string }
+}
+
+export interface PaymentReceipt {
+  id:string
+  timestamp:string
+  cents:number
+  products:Product[]
+  
 }
 
 export interface ShippingDetails {
@@ -27,5 +35,5 @@ export interface ShippingDetails {
   streetAddress:string
   stateProvince:string
   country:string
-  metadata: { [key:string]:string }
+  metadata:{ [key:string]:string }
 }

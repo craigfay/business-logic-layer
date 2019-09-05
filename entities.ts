@@ -2,7 +2,7 @@ export interface Product {
   id:string 
   name:string
   slug:string
-  price:number
+  cents:number
   description:string
   tags:Array<string>
   meta:{ [key:string]:string }

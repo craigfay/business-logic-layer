@@ -1,5 +1,6 @@
 import { Product, PaymentDetails, ShippingDetails } from '../entities'
 import InventoryManager from '../service-providers/inventory-manager.acme'
+import PaymentProcessor from '../service-providers/payment-processor.acme'
 
 interface OneTimePurchaseOptions {
   products:Product[]

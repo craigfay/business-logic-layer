@@ -50,8 +50,7 @@ export interface RefundReceipt {
 export interface SubscriptionDetails {
   id:string
   products:Array<{ id:string }>
-  frequency: 'weekly' | 'monthly' | 'quarterly'
-  // frequency:string
+  frequency:'weekly' | 'monthly' | 'quarterly'
   shipping:{ id:string }
   paymentReceipts:Array<{ id:string }>
   cents:number

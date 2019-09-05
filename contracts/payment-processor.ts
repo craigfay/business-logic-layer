@@ -11,5 +11,6 @@ type AcceptableError = ServerError | ClientError;
 export interface PaymentProcessorContract {
   processPayment: (payment:PaymentDetails) => Promise<PaymentReceipt | AcceptableError>
   refundPayment: (receipt:PaymentReceipt) => Promise<RefundReceipt | AcceptableError>
-  initiateSubscription: (payment:PaymentDetails, subscription:SubscriptionDetails)
+  createSubscription: (payment:PaymentDetails, subscription:SubscriptionDetails) => Promise<PaymentReceipt | AcceptableError>
+  cancelSubscription: (subscriptionId:string) => Promise<SubscriptionDetails | AcceptableError>
 }

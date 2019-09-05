@@ -45,3 +45,12 @@ export interface RefundReceipt {
   products:Product[]
   meta:{ [key:string]:string }
 }
+
+export interface SubscriptionDetails {
+  id:string
+  products:Product[]
+  frequency: 'weekly' | 'monthly' | 'quarterly'
+  shipping: ShippingDetails
+  paymentHistory: PaymentReceipt[]
+  meta:{ [key:string]:string }
+}

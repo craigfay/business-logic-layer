@@ -2,7 +2,7 @@ import { InventoryManagerContract } from '../contracts/inventory-manager'
 import { Product } from '../entities/product'
 import { ClientError, ServerError } from '../error-types'
 
-export class Netsuite implements InventoryManagerContract {
+class Netsuite implements InventoryManagerContract {
   async verifyProductsInStock(products:Product[]) {
     return products
   }
@@ -19,3 +19,5 @@ export class Netsuite implements InventoryManagerContract {
     return 100 - amount
   }
 }
+
+export const InventoryManager = new Netsuite();

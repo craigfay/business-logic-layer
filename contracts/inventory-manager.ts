@@ -1,5 +1,5 @@
 import { ServerError, ClientError } from '../error-types'
-import { Product } from '../entities/product'
+import { Product } from '../entities'
 
 type AcceptableError = ServerError | ClientError;
 

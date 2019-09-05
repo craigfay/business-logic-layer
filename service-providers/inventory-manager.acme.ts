@@ -19,3 +19,5 @@ const AcmeInventory: InventoryManagerContract = {
     return 100 - amount
   },
 }
+
+export default AcmeInventory;

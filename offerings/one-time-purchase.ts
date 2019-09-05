@@ -1,5 +1,5 @@
 import { Product, PaymentDetails, ShippingDetails } from '../entities'
-import { InventoryManager } from '../service-providers/inventory-manager.shopify'
+import InventoryManager from '../service-providers/inventory-manager.acme'
 
 interface OneTimePurchaseOptions {
   products:Product[]

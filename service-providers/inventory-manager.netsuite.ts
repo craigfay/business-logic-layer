@@ -3,7 +3,7 @@ import { Product } from '../entities/product'
 import { ClientError, ServerError } from '../error-types'
 
 class Netsuite implements InventoryManagerContract {
-  async verifyProductsInStock(products:Product[]) {
+  async verifyInStock(products:Product[]) {
     return products
   }
   async countInventory(productId:number) {
